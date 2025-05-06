@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AV Futura - Vanitha Baskaran</title>
   <style>
     body {
@@ -23,18 +22,28 @@
     }
 
     .logo {
-      text-align: center;
-      font-size: 36px;
-      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-bottom: 30px;
     }
 
-    .logo .blue {
-      color: #2563eb; /* Blue */
+    .logo img {
+      height: 60px;
+      margin-right: 15px;
     }
 
-    .logo .orange {
-      color: #f97316; /* Orange */
+    .logo-text {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .logo-text .blue {
+      color: #2563eb;
+    }
+
+    .logo-text .orange {
+      color: #f97316;
     }
 
     .info {
@@ -101,7 +110,6 @@
       color: #6b7280;
     }
 
-    /* Arrow styling */
     .arrow {
       transition: transform 0.3s ease;
     }
@@ -110,7 +118,6 @@
       transform: rotate(180deg);
     }
 
-    /* Collapsible content styles */
     .collapsible-content {
       display: none;
       margin-top: 10px;
@@ -139,15 +146,13 @@
 
   <div class="container">
     <div class="logo">
-      <span class="blue">AV</span> <span class="orange">FUTURA</span>
+      <img src="avfutura-logo.png" alt="AV Futura Logo" />
+      <div class="logo-text">
+        <span class="blue">AV</span> <span class="orange">FUTURA</span>
+      </div>
     </div>
 
     <div class="info">
-      <h1>Vanitha Baskaran</h1>
-      <p>B.E.S, M.C.A, MBA (IIT Madras)</p>
-      <p>AI Strategist (IESEG School of Management, France)</p>
-      <p class="highlight">Founder & Proprietor – AV Futura</p>
-      <p>Contact: +91 XXXXX XXX55</p>
       <p>Email: <a href="mailto:vanitha@avfutura.com">vanitha@avfutura.com</a></p>
       <p>Website: <a href="https://www.avfutura.com" target="_blank">www.avfutura.com</a></p>
       <p>Location: [chennai/vridhachalam]</p>
@@ -156,16 +161,13 @@
     <div class="services">
       <h2>Our Services</h2>
       <ul>
-        <li id="itTraining">
-          IT Training <span class="arrow">&#9660;</span>
-        </li>
+        <li id="itTraining">IT Training <span class="arrow">&#9660;</span></li>
         <div id="itTrainingContent" class="collapsible-content">
           <p>🚀 <strong>AV Futura – Premium IT Training Services</strong><br>
-          Master the future with expert-led IT Training from AV Futura! Whether you're a student, graduate, or working professional, we have something for everyone.</p>
+          Master the future with expert-led IT Training from AV Futura!</p>
           <ul>
             <li>✅ Industry-Relevant Courses</li>
             <li>✅ Hands-on Practical Training</li>
-            <li>✅ Expert Faculty with IIT & International Background</li>
             <li>✅ Flexible Online & Offline Sessions</li>
             <li>✅ Real-Time Projects & Case Studies</li>
             <li>✅ Interview & Resume Preparation</li>
@@ -174,12 +176,10 @@
           </ul>
         </div>
 
-        <li id="softwareDevelopment">
-          Software Development <span class="arrow">&#9660;</span>
-        </li>
+        <li id="softwareDevelopment">Software Development <span class="arrow">&#9660;</span></li>
         <div id="softwareDevelopmentContent" class="collapsible-content">
           <p>💻 <strong>AV Futura – Expert Software Development Services</strong><br>
-          Turn your ideas into powerful digital solutions with AV Futura’s custom software development offerings.</p>
+          Turn your ideas into powerful digital solutions with AV Futura.</p>
           <ul>
             <li>✅ Custom Web & App Development</li>
             <li>✅ Robust & Scalable Solutions</li>
@@ -192,12 +192,10 @@
           </ul>
         </div>
 
-        <li id="itConsultation">
-          IT Consultation <span class="arrow">&#9660;</span>
-        </li>
+        <li id="itConsultation">IT Consultation <span class="arrow">&#9660;</span></li>
         <div id="itConsultationContent" class="collapsible-content">
           <p>🧠 <strong>AV Futura – Professional IT Consultation Services</strong><br>
-          Empower your business with strategic IT insights and solutions tailored to your goals.</p>
+          Empower your business with strategic IT insights tailored to your goals.</p>
           <ul>
             <li>✅ Strategic Technology Planning</li>
             <li>✅ Infrastructure & Cloud Guidance</li>
@@ -206,16 +204,13 @@
             <li>✅ Process Optimization Solutions</li>
             <li>✅ Startup & Enterprise IT Consulting</li>
             <li>✅ Cost-Effective and Scalable Plans</li>
-            <li>✅ Consultation by IIT & Global Experts</li>
           </ul>
         </div>
 
-        <li id="softSkillsCoaching">
-          Soft Skills Coaching <span class="arrow">&#9660;</span>
-        </li>
+        <li id="softSkillsCoaching">Soft Skills Coaching <span class="arrow">&#9660;</span></li>
         <div id="softSkillsCoachingContent" class="collapsible-content">
           <p>🎤 <strong>AV Futura – Premium Soft Skills Coaching</strong><br>
-          Enhance your personal and professional growth with our expert-led soft skills programs.</p>
+          Enhance your growth with our expert-led soft skills programs.</p>
           <ul>
             <li>✅ Effective Communication Skills</li>
             <li>✅ Public Speaking & Presentation Mastery</li>
@@ -236,31 +231,6 @@
   </div>
 
   <script>
-    // JavaScript to handle collapsible behavior for individual sections
-    document.getElementById("itTraining").addEventListener("click", function() {
-      var content = document.getElementById("itTrainingContent");
-      var arrow = this.querySelector(".arrow");
-      toggleContent(content, arrow);
-    });
-
-    document.getElementById("softwareDevelopment").addEventListener("click", function() {
-      var content = document.getElementById("softwareDevelopmentContent");
-      var arrow = this.querySelector(".arrow");
-      toggleContent(content, arrow);
-    });
-
-    document.getElementById("itConsultation").addEventListener("click", function() {
-      var content = document.getElementById("itConsultationContent");
-      var arrow = this.querySelector(".arrow");
-      toggleContent(content, arrow);
-    });
-
-    document.getElementById("softSkillsCoaching").addEventListener("click", function() {
-      var content = document.getElementById("softSkillsCoachingContent");
-      var arrow = this.querySelector(".arrow");
-      toggleContent(content, arrow);
-    });
-
     function toggleContent(content, arrow) {
       if (content.style.display === "block") {
         content.style.display = "none";
@@ -270,6 +240,22 @@
         arrow.classList.add("down");
       }
     }
+
+    document.getElementById("itTraining").addEventListener("click", function() {
+      toggleContent(document.getElementById("itTrainingContent"), this.querySelector(".arrow"));
+    });
+
+    document.getElementById("softwareDevelopment").addEventListener("click", function() {
+      toggleContent(document.getElementById("softwareDevelopmentContent"), this.querySelector(".arrow"));
+    });
+
+    document.getElementById("itConsultation").addEventListener("click", function() {
+      toggleContent(document.getElementById("itConsultationContent"), this.querySelector(".arrow"));
+    });
+
+    document.getElementById("softSkillsCoaching").addEventListener("click", function() {
+      toggleContent(document.getElementById("softSkillsCoachingContent"), this.querySelector(".arrow"));
+    });
   </script>
 
 </body>
